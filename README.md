@@ -2,9 +2,9 @@
 
 "In the loving memory of my father, Late Sankar Dutta"
 
-Dev      : Bhaskar Dutta
-Email    : bhaskardutta2209@gmail.com
-Linkedin : https://www.linkedin.com/in/bhaskar-dutta-6b23b616a/
+- Dev      : Bhaskar Dutta
+- Email    : bhaskardutta2209@gmail.com
+- Linkedin : https://www.linkedin.com/in/bhaskar-dutta-6b23b616a/
 
 ## How to deploy
 - Modity the 1_deploy_control.py file in scripts folder
