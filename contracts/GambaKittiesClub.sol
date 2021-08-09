@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 /* 
+   In the loving memory of my father Late Sankar Dutta
    Dev        :   BhaskarDutta
    Email      :   bhaskardutta2209@gmail.com
    LinkedIn   :   https://www.linkedin.com/in/bhaskar-dutta-6b23b616a/
@@ -11,7 +12,7 @@ pragma solidity 0.6.6;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Ecrianza is ERC721, Ownable {
+contract GambaKittiesClub is ERC721, Ownable {
 
     using SafeMath for uint256;
 
@@ -21,7 +22,7 @@ contract Ecrianza is ERC721, Ownable {
 
     uint256 public startingIndex;
 
-    uint256 public constant nftPrice = 0.1 * 10**18; // 0.1 Ether
+    uint256 public constant nftPrice = 0.02 * 10**18; // 0.02 Ether
 
     uint public constant maxNftPurchase = 20;
 
