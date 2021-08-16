@@ -7,8 +7,8 @@ def main():
     GambaKittiesClub.deploy(
         "Gamba Kitties Club",
         "GKC",
-        100,
-        1627483885, # Sale start time
+        10000,
+        1628588441, # Sale start time
         {"from": dev},
         publish_source = publish_source
     )

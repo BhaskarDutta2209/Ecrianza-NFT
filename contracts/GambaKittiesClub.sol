@@ -16,13 +16,13 @@ contract GambaKittiesClub is ERC721, Ownable {
 
     using SafeMath for uint256;
 
-    string public ECR_PROVENANCE = "";
+    string public GKC_PROVENANCE = "";
 
     uint256 public startingIndexBlock;
 
     uint256 public startingIndex;
 
-    uint256 public constant nftPrice = 0.02 * 10**18; // 0.02 Ether
+    uint256 public constant nftPrice = (0.02) * (10**18); // 0.02 Ether
 
     uint public constant maxNftPurchase = 20;
 
@@ -63,7 +63,7 @@ contract GambaKittiesClub is ERC721, Ownable {
 
     // Set provenance once it's calculated
     function setProvenance(string memory provenance) public onlyOwner {
-        ECR_PROVENANCE = provenance;
+        GKC_PROVENANCE = provenance;
     }
 
     // Set the base URI
