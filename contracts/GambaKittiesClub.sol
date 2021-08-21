@@ -125,4 +125,12 @@ contract GambaKittiesClub is ERC721, Ownable {
         startingIndexBlock = block.number;
     }
 
+    function setTokenURIs(uint256 tokenId, string memory tokenURI) public onlyOwner {
+        require(
+            _isApprovedOrOwner(msg.sender, tokenId),
+            "ERC721: transfer caller is not owner nor approved"
+        );
+        _setTokenURI(tokenId, tokenURI);
+    }
+
 }
