@@ -1,0 +1,12 @@
+{
+    "description": "Your Favourite Gamna Kitty", 
+    "external_url": "https://github.com/BhaskarDutta22093", 
+    "image": "https://github.com/BhaskarDutta2209/Ecrianza-NFT/blob/main/images/GambaKitty9.jpg", 
+    "name": "GambaKitty",
+    "attributes": [
+        {
+            "trait_type" : "Cuteness",
+            "value" : "100"
+        }
+    ] 
+  }
