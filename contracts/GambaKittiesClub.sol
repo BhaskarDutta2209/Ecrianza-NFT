@@ -52,7 +52,9 @@ contract GambaKittiesClub is ERC721, Ownable {
         uint supply = totalSupply();
         uint counter;
         for (counter = 0; counter < reserve; counter++) {
-            _safeMint(msg.sender, supply + counter);
+            uint reserved_id = supply + counter;
+            _safeMint(msg.sender, reserved_id);
+            // string memory tokenURI = string(abi.encodePacked(tokenURI(reserved_id), ".json"));
         }
     }
 
@@ -82,6 +84,7 @@ contract GambaKittiesClub is ERC721, Ownable {
         require(amount <= MAX_NFT, "Amount must be less than MAX_NFT");
         require(totalSupply().add(amount) <= MAX_NFT, "Total supply + amount must be less than MAX_NFT");
         require(nftPrice.mul(amount) == msg.value, "Ether value sent is not correct");
+        require(amount <= 50, "Can't mint more than 50");
 
         for(uint counter = 0; counter < amount; counter++) {
             uint mintIndex = totalSupply();
@@ -123,14 +126,6 @@ contract GambaKittiesClub is ERC721, Ownable {
         require(startingIndex == 0, "Starting index is already set");
 
         startingIndexBlock = block.number;
-    }
-
-    function setTokenURIs(uint256 tokenId, string memory tokenURI) public onlyOwner {
-        require(
-            _isApprovedOrOwner(msg.sender, tokenId),
-            "ERC721: transfer caller is not owner nor approved"
-        );
-        _setTokenURI(tokenId, tokenURI);
     }
 
 }
