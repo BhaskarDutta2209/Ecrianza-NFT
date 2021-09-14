@@ -2,6 +2,7 @@ from brownie import GambaKittiesClub, accounts, network, config
 
 def main():
     dev = accounts.add(config['wallets']['from_key'])
+    network.gas_price("1.2 gwei")
     print(network.show_active())
     publish_source = True
     GambaKittiesClub.deploy(
